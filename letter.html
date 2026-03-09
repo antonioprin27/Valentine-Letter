@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Letter ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div id="letter-container" style="display:flex;">
+    <div class="letter-window open">
+
+      <!-- TYPEWRITER TEXT -->
+      <p id="typewriter" class="letter-text"></p>
+
+      <img src="cat_dance.gif" class="cat" alt="Happy Cat" />
+
+    </div>
+  </div>
+
+  <!-- SCRIPT MUST BE OUTSIDE THE <p> -->
+  <script>
+    const text = `My love 💕🧸,
+
+This is our second Valentine’s Day together… and somehow my heart loves you even more than it did the first time.
+
+I still remember how it felt when you first became part of my life — like the world quietly shifted into something softer, brighter, and more meaningful. Since then, every day with you has been a reminder that love isn’t just a word… it’s the way you look at me, the way you care, and the way you make ordinary moments feel magical.
+
+You are my happiness on my hardest days, my calm in the chaos, and the most beautiful part of my world. When life feels heavy, your presence alone makes everything lighter. When I lose my way, your love brings me home.
+
+Every smile of yours melts my heart.
+Every laugh of yours is my favourite sound.
+And every moment with you feels like a dream I never want to wake up from.
+
+I love the little things about us —
+the late-night talks that turn into early mornings,
+the silly debates about what to eat,
+the way our hands find each other without thinking,
+and the comfortable silence that says more than words ever could.
+
+Today, I’m not asking you to be my Valentine…
+I’m asking you — will you be my Valentine forever? ❤️
+
+I want a forever where we grow together,
+where we support each other’s dreams,
+where we annoy each other just enough to keep life interesting,
+and where we never stop choosing each other — every single day.
+
+And just so you know — if loving you were a job, I’d be the most dedicated employee ever… no sick days, no resignations, and definitely working overtime 😌
+
+Also, I should warn you… you’ve officially become my favourite distraction. My thoughts keep wandering back to you, and honestly, I don’t even want to focus anymore.
+
+You are my safe place,
+my greatest adventure,
+my sweetest addiction —
+and the only one I never want to quit.
+
+Thank you for being you.
+Thank you for loving me.
+And thank you for making my life feel like the most beautiful love story.
+
+So today, and every day after,
+I choose you.
+I choose us.
+I choose this love that keeps growing stronger.
+
+Forever yours,
+Pookie Antonio PRINCE 🧸😘`;
+
+    const speed = 35;
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML +=
+          text.charAt(i) === "\n" ? "<br>" : text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+
+</body>
+</html>
